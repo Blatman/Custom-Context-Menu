@@ -27,12 +27,12 @@ I have allowed Issues for this fork however maintenance and updates may be spora
 
 ## Current Themes
 
-10.13 (High Sierra) Light (uses base style.css)
-10.13 (High Sierra) Dark
-10.14 (Mojave) Light (pending - possibly same as 10.13)
-10.14 (Mojave) Dark
-12.5 (Monterey) Light
-12.5 (Monterey) Dark
+* 10.13 (High Sierra) Light (uses base style.css)
+* 10.13 (High Sierra) Dark
+* 10.14 (Mojave) Light (pending - possibly same as 10.13)
+* 10.14 (Mojave) Dark
+* 12.5 (Monterey) Light
+* 12.5 (Monterey) Dark
 
 
 ## Features
@@ -42,7 +42,8 @@ I have allowed Issues for this fork however maintenance and updates may be spora
 * No use timeout (no hover detected after right-click CM activation - currently 5 seconds)
 * Menu closing when no longer hovered
 * Light/Dark Mode handling Catalina onwards (Safari 15+)
-
+* Disabled menu items
+* Icon switching (item selection) (see Click the Piggy on last submenu)
 
 ## Tests
 
