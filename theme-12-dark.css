@@ -1,0 +1,105 @@
+
+#context-menu a.sm-link-icon::after{
+    font-family: "FontAwesome";
+    content: "\f054";  /* fa-chevron-right */
+    position:  absolute;
+    right:  10px;
+    font-size: 0.8em;
+}
+
+hr {
+  border: 1px solid #566573;
+}
+
+/* context menu */
+
+.context-menu {
+  background-color: #273746;
+/*  background-color: rgba(39, 55, 70, 0.7); */
+  border: solid 0px #1c2833;
+}
+
+.context-menu-active {  /* needed to avoid no right-click  */
+  display: block;
+}
+
+.context-menu__link {
+  color: #fff;  /* #0066aa; */
+  border-radius: 5px;
+  margin-left: 3px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 3px;
+}
+
+.context-menu__link:hover {
+  color: #fff;
+  border-radius: 5px;
+  margin-left: 3px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 3px;
+  width: 96%;
+}
+
+a.context-menu__link {
+  border-radius: 5px;
+  width:  100%;
+}
+
+.context-menu__link-disabled {
+  color: #bdbbc3;  /* #0066aa; */
+  margin-left: 0px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.context-menu__link-disabled:hover {
+  color: #bdbbc3;
+  background-color: #5d6062;  /* #0066aa; */
+  width:  100%;
+  margin-left: 0px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* context-submenu */
+
+.context-submenu {
+  background-color: #273746;
+  border: solid 0px #1c2833;
+}
+
+.context-submenu-active {  /* needed to avoid no right-click  */
+  display: block;
+}
+
+.context-submenu__link {
+  color: #fff;  /* #0066aa; */
+  border-radius: 5px;
+  margin-left: 3px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 3px;
+}
+
+.context-submenu__link:hover {
+  color: #fff;
+  border-radius: 5px;
+  margin-left: 3px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 3px;
+}
+
+.submenuActive {
+  color: #fff;
+  border-radius: 5px;
+  margin-left: 3px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 3px;
+}
+
+
+

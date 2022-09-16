@@ -1,78 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Custom Context Menus!</title>
-  <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Custom Context Menus!</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <!--  <link rel="stylesheet" href="style.css"> -->
+    <!--  <link rel="stylesheet" href="theme-1013-dark.css"> -->
+    <!--  <link rel="stylesheet" href="theme-1014-dark.css"> -->
+    <!--  <link rel="stylesheet" href="theme-12-light.css"> -->
+    <!--  <link rel="stylesheet" href="theme-12-dark.css"> -->
 </head>
+
 <body>
-  <header class="primary-header">
-    <div class="container">
-      <h1 class="primary-header__title">
-        My Tasks App <small>using custom context menus</small>
-      </h1>
+    <header class="primary-header">
+        <div class="container">
+            <h1 class="primary-header__title">
+                My Tasks App <small>using custom context menus</small>
+            </h1>
+        </div>
+    </header>
+    <main class="content">
+        <div class="container">
+            <ul class="tasks">
+                <li class="task" data-id="3">
+                    <div class="task__content">
+                        Go To Grocery
+                    </div>
+                    <div class="task__actions">
+                        <i class="fa fa-eye"></i>
+                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-times"></i>
+                    </div>
+                </li>
+                <li class="task" data-id="2">
+                    <div class="task__content">
+                        Type Some Code
+                    </div>
+                    <div class="task__actions">
+                        <i class="fa fa-eye"></i>
+                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-times"></i>
+                    </div>
+                </li>
+                <li class="task" data-id="1">
+                    <div class="task__content">
+                        Build An App
+                    </div>
+                    <div class="task__actions">
+                        <i class="fa fa-eye"></i>
+                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-times"></i>
+                    </div>
+                </li>
+            </ul>
+            <div class="content__footer">
+                <button>Add A New Task</button>
+            </div>
+        </div>
+    </main>
+    <footer class="primary-footer">
+        <div class="container">
+            <small>&copy; 2015, Context Menu Madness!</small>
+        </div>
+    </footer>
+    <nav id="context-menu" class="context-menu">
+        <ul class="context-menu__items">
+            <li class="context-menu__item">
+                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm0"><i class="fa fa-leaf"></i> Nature List</a>
+            </li>
+            <li class="context-menu__item">
+                <a href="#" class="context-menu__link" data-action="View"><i class="fa fa-eye"></i> View Task</a>
+            </li>
+            <li class="context-menu__item">
+                <a href="#" class="context-menu__link" data-action="Edit"><i class="fa fa-edit"></i> Edit Task</a>
+            </li>
+            <li class="context-menu__item">
+                <a href="#" class="context-menu__link" data-action="Delete"><i class="fa fa-times"></i> Delete Task</a>
+            </li>
+            <li class="context-menu__item">
+                <hr />
+            </li>
+            <li class="context-menu__item">
+                <a href="#" class="context-menu__link" data-action="Edit"><i class="fa fa-edit"></i> Change Desktop Background Wallpaper</a>
+            </li>
+            <li class="context-menu__item">
+                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm6"><i class="fa fa-gear"></i> Options</a>
+            </li>
+            <li class="context-menu__item">
+                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm7"><i class="fa fa-plane"></i> Travel</a>
+            </li>
+            <li class="context-menu__item">
+                <a href="#" class="context-menu__link context-menu__link-disabled" data-action="Paint"><i class="fa fa-paint-brush"></i> Paint the Moon</a>
+            </li>
+            <li class="context-menu__item">
+                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm9"><i class="fa fa-ellipsis-h"></i> LongStuff</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="context-submenu">
+        <nav id="sm0" class="context-submenu" data-id="0">
+            <ul class="context-submenu__items">
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="Apple"><i class="fa fa-apple"></i> Fruit </a>
+                </li>
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="Paw"><i class="fa fa-paw"></i> Paw</a>
+                </li>
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="Tree"><i class="fa fa-tree"></i> Tree</a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="sm6" class="context-submenu" data-id="6">
+            <ul class="context-submenu__items">
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="SMA"><i class="fa fa-check"></i> SubMenu Item A</a>
+                </li>
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="SMB"><i class="fa fa-minus"></i> SubMenu Item B</a>
+                </li>
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="SMC"><i class="fa fa-plus"></i> SubMenu Item C</a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="sm7" class="context-submenu" data-id="7">
+            <ul class="context-submenu__items">
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="2SMA2"><i class="fa fa-car"></i> Second SubMenu Item 2A</a>
+                </li>
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="2SMB2"><i class="fa fa-bus"></i> Second SubMenu Item 2B</a>
+                </li>
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="2SMC2"><i class="fa fa-train"></i> Second SubMenu Item 2C</a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="sm9" class="context-submenu" data-id="9">
+            <ul class="context-submenu__items">
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="TOGGLEICON"><i class="fa fa-chain"></i> Click Piggy</a>
+                </li>
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="Might break"><i class="fa fa-coffee"></i> This line is a joy to behold</a>
+                </li>
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="Sure to break"><i class="fa fa-bomb"></i> Here we go again - another big long line to check stuff out, maybe it will work maybe not. </a>
+                </li>
+            </ul>
+        </nav>
     </div>
-  </header>
-  <main class="content">
-    <div class="container">
-      <ul class="tasks">
-        <li class="task" data-id="3">
-          <div class="task__content">
-            Go To Grocery
-          </div>
-          <div class="task__actions">
-            <i class="fa fa-eye"></i>
-            <i class="fa fa-edit"></i>
-            <i class="fa fa-times"></i>
-          </div>
-        </li>
-        <li class="task" data-id="2">
-          <div class="task__content">
-            Type Some Code
-          </div>
-          <div class="task__actions">
-            <i class="fa fa-eye"></i>
-            <i class="fa fa-edit"></i>
-            <i class="fa fa-times"></i>
-          </div>
-        </li>
-        <li class="task" data-id="1">
-          <div class="task__content">
-            Build An App
-          </div>
-          <div class="task__actions">
-            <i class="fa fa-eye"></i>
-            <i class="fa fa-edit"></i>
-            <i class="fa fa-times"></i>
-          </div>
-        </li>
-      </ul>
-      <div class="content__footer">
-        <button>Add A New Task</button>
-      </div>
-    </div>
-  </main>
-  <footer class="primary-footer">
-    <div class="container">
-      <small>&copy; 2015, Context Menu Madness!</small>
-    </div>
-  </footer>
-  <nav id="context-menu" class="context-menu">
-    <ul class="context-menu__items">
-      <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="View"><i class="fa fa-eye"></i> View Task</a>
-      </li>
-      <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Edit"><i class="fa fa-edit"></i> Edit Task</a>
-      </li>
-      <li class="context-menu__item">
-        <a href="#" class="context-menu__link" data-action="Delete"><i class="fa fa-times"></i> Delete Task</a>
-      </li>
-    </ul>
-  </nav>
-  <script src="main.js"></script>
+
+    <script src="main.js"></script>
+
+    <script>
+        /* *******************  not required if style links are used in HEAD  ******************* */
+
+        var customtheme
+
+        if (window.matchMedia) {
+            // Check if the dark-mode Media-Query matches
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                // Dark
+                console.log('DARK mode supported');
+                customtheme = 'theme-12-dark.css';
+            } else {
+                // Light
+                console.log('LIGHT mode supported');
+                customtheme = 'theme-12-light.css';
+            }
+        } else {
+            // Default (when Media-Queries are not supported)
+            console.log('LIGHT/DARK mode not supported');
+            customtheme = 'style.css'
+        }
+
+        function loadStyle(src) {
+            return new Promise(function(resolve, reject) {
+                let link = document.createElement('link');
+                link.href = src;
+                link.rel = 'stylesheet';
+
+                link.onload = () => resolve(link);
+                link.onerror = () => reject(new Error(`Style load error for ${src}`));
+
+                document.head.append(link);
+            });
+        }
+
+        window.onload = function() {
+            loadStyle("style.css")
+                .then(() => loadStyle(customtheme))
+                .then(() => {
+                    alert('All styles are loaded!');
+                })
+                .catch(err => alert(err));
+        }
+
+        /* **************************************************************************************** */
+
+    </script>
 </body>
+
 </html>
