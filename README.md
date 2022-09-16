@@ -48,6 +48,12 @@ I have allowed Issues for this fork however maintenance and updates may be spora
 * Disabled menu items
 * Icon switching (item selection) (see Click the Piggy on last submenu)
 
+
+## Usage
+
+Just download the zip via the Green Code button, unzip then double-click index.html which should open in Safari (right-click for Context Menu).
+The page will default to MacOS 12 theming.
+
 ## Tests
 
 This fork was tested in the following browsers:
