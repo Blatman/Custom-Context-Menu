@@ -385,9 +385,9 @@
 
         var smCoordsX = e.offsetLeft + e.offsetWidth;
         // needs to alter depending on which item
-        var tempo = sm.replace('sm', '');
-//        var submenuOffsetHeight = 22 * tempo;
-        var submenuOffsetHeight = 25 * tempo;
+        var adjHeight = sm.replace('sm', '');
+//        var submenuOffsetHeight = 22 * adjHeight;
+        var submenuOffsetHeight = 25 * adjHeight;
         var smCoordsY = e.offsetTop + submenuOffsetHeight;
         var smCurrent = document.getElementById(sm);
 
@@ -399,16 +399,16 @@
 
         if ((windowWidth - smCoordsX) < menuWidth) {
             // submenu moved to left side
-            var tempo = windowWidth - (menuWidth + submenuWidth - 4);
+            var checkWidth = windowWidth - (menuWidth + submenuWidth - 4);
             var adjuster = windowWidth - (e.offsetLeft + menuWidth);
-            smCurrent.style.left = windowWidth - (menuWidth + submenuWidth - 4) - adjuster + 2 + "px";  // 2 needed for 12 rounded style links transition - SM CM slight overlap.
+            smCurrent.style.left = checkWidth - adjuster + 2 + "px";  // 2 needed for 12 rounded style links transition - SM CM slight overlap.
         } else {
             // submenu on right side (normal)
             smCurrent.style.left = smCoordsX + "px";
         }
 
-        if ((windowHeight - smCoordsY) < menuHeight) {
-            smCurrent.style.top = windowHeight - submenuHeight - 4 + "px";
+        if((smCoordsY + submenuHeight) > windowHeight) {
+            smCurrent.style.top = (windowHeight - submenuHeight + (1 * adjHeight)) + "px";
         } else {
             smCurrent.style.top = smCoordsY + "px";
         }
