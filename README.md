@@ -47,7 +47,7 @@ I have allowed Issues for this fork however maintenance and updates may be spora
 * Light/Dark Mode handling Catalina onwards (Safari 15+)
 * Disabled menu items
 * Icon switching (item selection) (see Click the Piggy on last submenu)
-
+* Use of ellipsis when max width used (will give tooltip inherently for incomplete menu items)
 
 ## Usage
 
