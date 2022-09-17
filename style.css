@@ -28,6 +28,10 @@ li .context-menu {
 .fa-window-minimize {
     color:  Gainsboro;
 }
+/* used for blank icon */
+.fa-themeisle {
+    opacity: 0;
+}
 
 .container {
   margin: 0 auto;
