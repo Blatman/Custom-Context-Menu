@@ -75,7 +75,7 @@
     var contextMenuItemClassName = "context-menu__item";
     var contextMenuLinkClassName = "context-menu__link";
     var contextMenuActive = "context-menu-active";
-    var contextSubMenuActive = "context-submenu-active"; // Blat
+    var contextSubMenuActive = "context-submenu-active";
 
     var taskItemClassName = "task";
     var taskItemInContext;
@@ -93,8 +93,8 @@
     var menuPositionX;
     var menuPositionY;
 
-    var submenu = document.querySelectorAll(".context-submenu"); // Blat
-    var submenuParent = document.querySelector(".context-submenu__link"); // Blat
+    var submenu = document.querySelectorAll(".context-submenu");
+    var submenuParent = document.querySelector(".context-submenu__link");
     var submenuState = 0;
     var submenuWidth;
     var submenuHeight;
@@ -117,7 +117,7 @@
         clickListener();
         keyupListener();
         resizeListener();
-        hoverListener(); // Blat
+        hoverListener();
     }
 
     /**
@@ -157,7 +157,7 @@
         document.addEventListener("click", function (e) {
 
             var clickedElIsLink = clickInsideElement(e, contextMenuLinkClassName);
-            if(!e.target.className.match(/context-menu__link-disabled/)) {
+            if((!e.target.className.match(/context-menu__link-disabled/)) && (!e.target.className.match(/fa-window-minimize/))) {
 
                 if (clickedElIsLink) {
                     e.preventDefault();
@@ -169,12 +169,14 @@
                         toggleSubMenuOff(1);
                     }
                 }
+            } else {
+                // className is context-menu__link-disabled (may be a separator)
             }
         });
     }
 
     /**
-     * Listens for hover events. (Blat)
+     * Listens for hover events.
      */
     function hoverListener() {
 
@@ -185,7 +187,7 @@
 
             idleClose = false;
 
-            if(!e.target.className.match(/context-menu__link-disabled/)) {
+            if((!e.target.className.match(/context-menu__link-disabled/)) && (!e.target.className.match(/fa-window-minimize/))) {
                 var matcho = e.target.className;
                 var clear = document.querySelectorAll('.context-submenu__link');
                 clear.forEach(classo => {
@@ -231,12 +233,14 @@
                         toggleSubMenuOff(1);
                     }
                 }
-            }    
+            } else {
+                // className is context-menu__link-disabled (may be a separator)
+            }
         });
     }
 
     /**
-     * Listens for menu leave events. (Blat)
+     * Listens for menu leave events.
      */
      // need to cater for leaving CM and SM directly and transition between CM and SM
     var cmLeave = document.getElementById('context-menu');
@@ -318,7 +322,6 @@
     /**
      * Turns the custom context submenu on.
      */
-//    function toggleSubMenuOn(sm) {
     function toggleSubMenuOn(obbo, sm) {
         if (submenuState !== 1) {
             submenuState = 1;
@@ -377,7 +380,7 @@
     }
 
     /**
-     * Positions the submenu properly.  // Blat
+     * Positions the submenu properly.
      * 
      * @param {Object} e The event
      */
@@ -386,8 +389,7 @@
         var smCoordsX = e.offsetLeft + e.offsetWidth;
         // needs to alter depending on which item
         var adjHeight = sm.replace('sm', '');
-//        var submenuOffsetHeight = 22 * adjHeight;
-        var submenuOffsetHeight = 25 * adjHeight;
+        var submenuOffsetHeight = 26 * adjHeight;
         var smCoordsY = e.offsetTop + submenuOffsetHeight;
         var smCurrent = document.getElementById(sm);
 
@@ -424,21 +426,21 @@
 
         var da = link.getAttribute("data-action")
         if(da != 'TOGGLEICON') {
-            toggleMenuOff(0);
-            toggleSubMenuOff(0);
-        }
-
-        // example of icon changing for menu item (Click Piggy)
-        var tempo = link.firstChild.classList;
-
-        if(tempo.value.match(/fa-chain-broken/)) {
-            tempo.remove('fa-chain-broken');
-            tempo.add('fa-chain');
+            toggleMenuOff(1);
+            toggleSubMenuOff(1);
         } else {
-            tempo.remove('fa-chain');
-            tempo.add('fa-chain-broken');
-        }
 
+            // example of icon changing for menu item (Click Piggy)
+            var tempo = link.firstChild.classList;
+
+            if(tempo.value.match(/fa-chain-broken/)) {
+                tempo.remove('fa-chain-broken');
+                tempo.add('fa-chain');
+            } else {
+                tempo.remove('fa-chain');
+                tempo.add('fa-chain-broken');
+            }
+        }
     }
 
 

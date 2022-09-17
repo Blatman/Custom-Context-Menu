@@ -1,4 +1,8 @@
 
+a.context-menu__link {
+  border-radius: 5px;
+}
+
 #context-menu a.sm-link-icon::after{
     font-family: "FontAwesome";
     content: "\f054";  /* fa-chevron-right */
@@ -7,8 +11,11 @@
     font-size: 0.8em;
 }
 
-/* context menu */
+.fa-window-minimize {
+    color:  Gainsboro;
+}
 
+/* context menu */
 
 .context-menu-active {  /* needed to avoid no right-click  */
   display: block;
@@ -31,12 +38,12 @@
   width: 100%;
 }
 
-a.context-menu__link {
-  border-radius: 5px;
-}
-
 .context-menu__link-disabled {
-  color: #bdbbc3;  /* #0066aa; */
+  color: #bdbbc3;
+  margin-left: 3px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 3px;
 }
 
 .context-menu__link-disabled:hover {
@@ -49,7 +56,6 @@ a.context-menu__link {
 }
 
 /* context-submenu */
-
 
 .context-submenu-active {  /* needed to avoid no right-click  */
   display: block;

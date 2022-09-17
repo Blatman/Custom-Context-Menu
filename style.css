@@ -17,6 +17,7 @@ a.context-menu__link {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 250px;
+  width: 100%;
 }
 
 li .context-menu {
@@ -24,9 +25,8 @@ li .context-menu {
   line-height: 22px;
 }
 
-li>hr {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.fa-window-minimize {
+    color:  Gainsboro;
 }
 
 .container {
@@ -91,10 +91,6 @@ li>hr {
 
 .task:last-child {
   border-bottom: none;
-}
-
-hr {
-  border: 1px solid Gainsboro;
 }
 
 #context-menu a.sm-link-icon::after{
@@ -167,22 +163,11 @@ hr {
   margin-bottom: 4px;
 }
 
-a.context-menu__link {
-  width:  100%;
-}
-
 .context-menu__link-disabled {
   display: block;
   padding: 4px 12px;
-  color: #312b5e;
-  text-decoration: none;
-  margin-left: 0px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.context-menu__link-disabled {
   color: #bdbbc3;
+  text-decoration: none;
   margin-left: 0px;
   margin-top: 4px;
   margin-bottom: 4px;

@@ -1,6 +1,6 @@
 
-hr {
-  border: 1px solid #566573;
+.fa-window-minimize {
+    color:  #566573;
 }
 
 /* context menu */
@@ -19,11 +19,11 @@ hr {
 }
 
 .context-menu__link {
-  color: #fff;  /* #0066aa; */
+  color: #fff;
 }
 
 .context-menu__link-disabled {
-  color: #bdbbc3;  /* #0066aa; */
+  color: #bdbbc3;
   margin-left: 0px;
   margin-top: 4px;
   margin-bottom: 4px;
@@ -31,7 +31,7 @@ hr {
 
 .context-menu__link-disabled:hover {
   color: #bdbbc3;
-  background-color: #5d6062;  /* #0066aa; */
+  background-color: #5d6062;
   width:  100%;
   margin-left: 0px;
   margin-top: 4px;
@@ -54,5 +54,5 @@ hr {
 }
 
 .context-submenu__link {
-  color: #fff;  /* #0066aa; */
+  color: #fff;
 }

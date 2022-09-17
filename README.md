@@ -59,9 +59,13 @@ I have allowed Issues for this fork however maintenance and updates may be spora
 Just download the zip via the green Code button, unzip then double-click index.html which should open in Safari (right-click for Context Menu).
 The page will default to MacOS 12 theming.
 
+Two index pages are included with slight variations of layout.
+
 ## Operational Detail
 
 The index.html contains the hooks for the Context Menu. In this case the data-id is the hook for the clicked task. Once the menu is open then the data-action attribute provides the hook for each item. If the item happens to be a submenu link the data-action will be smx where x is the item row starting from 0 in the Context Menu. eg: if a Context Menu has 7 item rows with the submenus being on the second and last rows then the respective data-action attributes should be sm1 and sm6 (see index.html for detail).
+
+The context menu items all use a similar li element layout to try and keep element height consistency which makes it a bit easier to align the submenus. For this reason the hr element (separator) is replaced with a fa-window-minimize icon which is stretched to the width of the menu using the css transform method - this should suffice unless you wish to have dynamically changing menu items of variable width in which case you will need to be creative!
 
 ## Tests
 
@@ -72,6 +76,9 @@ This fork was tested in the following browsers:
 * Chromium 84
 * Opera 88/91 (slight misalignments)
 
+## Special Note
+
+I usually just test with the Safari browser since my aim is to use the Context Menu with Safari webview components and after a change in CSS/JS/HTML code a page reload usually suffices to test the changes however particularly with some parts of CSS it is necessary to completely close the browser and re-open it to ensure the changes are picked up.
 
 ## License
 
