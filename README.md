@@ -16,14 +16,17 @@ The demo above is for the original repo code.
 
 ## Screen shots
 
-10.13 Light           
-<img src="/screenshots/cm-1013-light.png" alt="1013light" width="50%"/>
+10.13 Light
+
+<img src="/screenshots/cm-1013-light.png" alt="1013light" width="50%" />
 
 10.13 Dark
-<img src="/screenshots/cm-1013-dark.png" alt="1013dark" width="50%"/>
+
+<img src="/screenshots/cm-1013-dark.png" alt="1013dark" width="50%" />
 
 12.5 Dark
-<img src="/screenshots/cm-125-dark.png" alt="125dark" width="50%"/>
+
+<img src="/screenshots/cm-125-dark.png" alt="125dark" width="50%" />
 
 Light/Dark Mode detection works with Safari 15+ (Catalina onwards) but is not fully functional on earlier releases eg: High Sierra has Dark mode only for the main menus and dock and will identify via the @media query as supporting Light Mode although Dark may be set.
 
