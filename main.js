@@ -74,6 +74,7 @@
     var contextMenuClassName = "context-menu";
     var contextMenuItemClassName = "context-menu__item";
     var contextMenuLinkClassName = "context-menu__link";
+    var contextSubMenuLinkClassName = "context-submenu__link";
     var contextMenuActive = "context-menu-active";
     var contextSubMenuActive = "context-submenu-active";
 
@@ -156,21 +157,66 @@
     function clickListener() {
         document.addEventListener("click", function (e) {
 
+            e.preventDefault();
             var clickedElIsLink = clickInsideElement(e, contextMenuLinkClassName);
-            if((!e.target.className.match(/context-menu__link-disabled/)) && (!e.target.className.match(/fa-window-minimize/))) {
+            var clickedElIsSubLink = clickInsideElement(e, contextSubMenuLinkClassName);
 
+            if((!e.target.className.match(/context-menu__link-disabled/)) && (!e.target.className.match(/fa-window-minimize/))) {
+                
                 if (clickedElIsLink) {
-                    e.preventDefault();
-                    menuItemListener(clickedElIsLink);
+                    var status;
+                    if(clickedElIsLink.className.match(/context-menu__link-disabled/)) {
+                        toggleMenuOff(0);
+                        toggleSubMenuOff(0);
+                        status = " - Disabled Link";
+                    } else {
+                        var da = clickedElIsLink.getAttribute("data-action");
+                        if(da == 'TOGGLEICON') {
+                            toggleMenuOff(0);
+                            toggleSubMenuOff(0);
+                        } else {
+                            toggleMenuOff(1);
+                            toggleSubMenuOff(1);
+                        }
+                        status = " - Active Link";
+                    }
+                    menuItemListener(clickedElIsLink, status);
+
                 } else {
+
+                    var status;
                     var button = e.which || e.button;
-                    if (button === 1) {
-                        toggleMenuOff(1);
-                        toggleSubMenuOff(1);
+
+                    if (e.target.className.match(/context-(sub)?menu-active/)) {
+                        status = " - Context Menu/SubMenu, No Link clicked";
+                        if (button === 1) {
+                            toggleMenuOff(1);
+                            toggleSubMenuOff(1);
+                            menuItemListener(e.target, status);
+                        }
+                    } else {
+                        if(e.target.className.match(/context-submenu__link/)) {
+                            status = ' - SubMenu Link';
+                            if (button === 1) {
+                                toggleMenuOff(1);
+                                toggleSubMenuOff(1);
+                                menuItemListener(clickedElIsSubLink, status);
+                            }
+                        }
                     }
                 }
             } else {
                 // className is context-menu__link-disabled (may be a separator)
+                var status;
+                var da = e.target.getAttribute('data-action')
+                if(((e.target.className.match(/context-menu__link-disabled/)) && (da == 'separator')) || (e.target.className.match(/fa-window-minimize/))) {
+                    status = " - Separator Link";
+                } else {
+                    status = " - SubMenu Disabled Link";
+                }
+                toggleMenuOff(0);
+                toggleSubMenuOff(0);
+                menuItemListener(e.target, status);
             }
         });
     }
@@ -282,6 +328,7 @@
         window.onkeyup = function (e) {
             if (e.keyCode === 27) {
                 toggleMenuOff(1);
+                toggleSubMenuOff(1);
             }
         }
     }
@@ -316,6 +363,7 @@
         if ((idleClose) && (num == 0)) {
             menuState = 0;
             menu.classList.remove(contextMenuActive);
+            document.getElementById('output').innerHTML = 'Context Menu has timed out as not used';
         }    
     }
 
@@ -421,14 +469,30 @@
      * 
      * @param {HTMLElement} link The link that was clicked
      */
-    function menuItemListener(link) {
-        console.log("Task ID - " + taskItemInContext.getAttribute("data-id") + ", Task action - " + link.getAttribute("data-action"));
+    function menuItemListener(link, status) {
+        console.log("Task ID - " + taskItemInContext.getAttribute("data-id") + ", Task action - " + link.getAttribute("data-action") + status);
 
-        var da = link.getAttribute("data-action")
-        if(da != 'TOGGLEICON') {
-            toggleMenuOff(1);
-            toggleSubMenuOff(1);
-        } else {
+        var real,
+            tid = taskItemInContext.getAttribute("data-id"),
+            itemaction = link.getAttribute("data-action");
+        
+        if(tid == 1) { real = 'Build an App on page was clicked'}
+        if(tid == 2) { real = 'Type Some Code on page was clicked'}
+        if(tid == 3) { real = 'Go To Grocery on page was clicked'}
+
+        document.getElementById('output').innerHTML = 'Task ID: ' + tid + ' - ' + real +'<br />' + 'CM Item Action:' + itemaction + status;
+
+        var da = link.getAttribute("data-action");
+
+        if(da == 'newTab') {
+            window.open('https://www.wanderinghippo.org.uk', '_blank');
+        }
+
+        if(da == 'Print') {
+            window.print();
+        }
+
+        if(da == 'TOGGLEICON') {
 
             // example of icon changing for menu item (Click Piggy)
             var tempo = link.firstChild.classList;
@@ -443,10 +507,13 @@
         }
     }
 
-
     /**
      * Run the app.
      */
     init();
 
 })();
+
+
+
+

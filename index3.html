@@ -6,7 +6,7 @@
     <title>Custom Context Menus!</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
-    <!--  <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <!--  <link rel="stylesheet" href="theme-1013-dark.css"> -->
     <!--  <link rel="stylesheet" href="theme-1014-dark.css"> -->
     <!--  <link rel="stylesheet" href="theme-12-light.css"> -->
@@ -72,24 +72,24 @@
     <nav id="context-menu" class="context-menu">
         <ul class="context-menu__items">
             <li class="context-menu__item">
-                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm0"><i class="fa fa-leaf"></i>&nbsp;Nature List</a>
+                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm0"><i id="b0" class="fa fa-circle" data-count="3"></i>&nbsp;Nature List</a>
             </li>
             <li class="context-menu__item">
                 <a href="#" class="context-menu__link context-menu__link-disabled" data-action="separator" style="cursor:default;"><i class="fa fa-window-minimize" style="transform: scale(60, 1); font-size: 8px;"></i></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-menu__link" data-action="View"><i class="fa fa-eye"></i>&nbsp;View Task</a>
+                <a href="#" class="context-menu__link" data-action="Cut"><i class="fa fa-themeisle"></i>&nbsp;Cut<span class="speed">&#x2318;X</span></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-menu__link context-menu__link-disabled" data-action="Edit" style="cursor:default;"><i class="fa fa-edit"></i> Edit Task</a>
+                <a href="#" class="context-menu__link" data-action="Copy"><i class="fa fa-themeisle"></i>&nbsp;Copy<span class="speed">&#x2318;C</span></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-menu__link" data-action="Delete"><i class="fa fa-times"></i>&nbsp;Delete Task</a>
+                <a href="#" class="context-menu__link" data-action="Paste"><i class="fa fa-themeisle"></i>&nbsp;Paste<span class="speed">&#x2318;V</span></a>
             </li>
                 <a href="#" class="context-menu__link context-menu__link-disabled" data-action="separator" style="cursor:default;"><i class="fa fa-window-minimize" style="transform: scale(60, 1); font-size: 8px;"></i></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-menu__link" data-action="Edit"><i class="fa fa-edit"></i>&nbsp;Change Desktop Background Wallpaper</a>
+                <a href="#" class="context-menu__link" data-action="Print"><i class="fa fa-themeisle"></i>&nbsp;Print<span class="speed">&#x2318;P</span></a>
             </li>
             <li class="context-menu__item">
                 <a href="#" class="context-submenu__link sm-link-icon" data-action="sm7"><i class="fa fa-gear"></i>&nbsp;Options</a>
@@ -98,7 +98,7 @@
                 <a href="#" class="context-submenu__link sm-link-icon" data-action="sm8"><i class="fa fa-plane"></i>&nbsp;Travel</a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-menu__link context-menu__link-disabled" data-action="Paint" style="cursor:default;"><i class="fa fa-paint-brush"></i> Paint the Moon</a>
+                <a href="#" class="context-menu__link context-menu__link-disabled" data-action="PaintMoon" style="cursor:default;"><i class="fa fa-paint-brush"></i><span class="itemlabel" style="width: 70px;">&nbsp;Paint the Moon</span><i class="speed">&#x2303;&#x2325;&#x2318;5</i></a>
             </li>
             <li class="context-menu__item">
                 <a href="#" class="context-submenu__link sm-link-icon" data-action="sm10"><i class="fa fa-ellipsis-h"></i>&nbsp;LongStuff</a>
@@ -156,15 +156,25 @@
                 <li class="context-submenu__item">
                     <a href="#" class="context-menu__link" data-action="Sure to break"><i class="fa fa-bomb"></i>&nbsp;Here we go again - another big long line to check stuff out, maybe it will work maybe not. </a>
                 </li>
+                <li class="context-menu__item">
+                    <a href="#" class="context-menu__link context-menu__link-disabled" data-action="separator" style="cursor:default;"><i class="fa fa-window-minimize" style="transform: scale(60, 1); font-size: 8px;"></i></a>
+                </li>
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="goFolder"><i class="fa fa-themeisle"></i>&nbsp;Go to Folder ...<span class="speed">&#x21e7;&#x2318;G</span></a>
+                </li>
+                <li class="context-submenu__item">
+                    <a href="#" class="context-menu__link" data-action="newTab"><i class="fa fa-themeisle"></i>&nbsp;New TAB<span class="speed">&#x2318;T</span></a>
+                </li>
             </ul>
         </nav>
     </div>
 
     <script src="main.js"></script>
+<!--    <script src="keyhandler.js"></script> -->
 
     <script>
         /* *******************  not required if style links are used in HEAD  ******************* */
-
+/*
         var customtheme
 
         if (window.matchMedia) {
@@ -176,8 +186,7 @@
             } else {
                 // Light
                 console.log('LIGHT mode supported');
-            //    customtheme = 'theme-12-light.css';
-            customtheme = 'style.css'
+                customtheme = 'theme-12-light.css';
             }
         } else {
             // Default (when Media-Queries are not supported)
@@ -206,7 +215,7 @@
                 })
                 .catch(err => alert(err));
         }
-
+*/
         /* **************************************************************************************** */
 
     </script>

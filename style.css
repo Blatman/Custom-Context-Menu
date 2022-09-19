@@ -25,14 +25,32 @@ li .context-menu {
   line-height: 22px;
 }
 
+#output {
+  position: relative;
+  top:  20px;
+  left:  30px;
+  color: green;
+}
+
 .fa-window-minimize {
     color:  Gainsboro;
 }
 /* used for blank icon */
 .fa-themeisle {
-    opacity: 0;
+  opacity: 0;
 }
 
+.itemlabel {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.speed {
+  position:  absolute;
+  right: 5px;
+}
 .container {
   margin: 0 auto;
   padding: 0 24px;
@@ -98,11 +116,11 @@ li .context-menu {
 }
 
 #context-menu a.sm-link-icon::after{
-    font-family: "FontAwesome";
-    content: "\f04b";  /* fa-play */
-    position:  absolute;
-    right:  10px;
-    font-size: 0.8em;
+  font-family: "FontAwesome";
+  content: "\f04b";  /* fa-play */
+  position:  absolute;
+  right:  10px;
+  font-size: 0.8em;
 }
 
 /* context menu */
@@ -114,6 +132,7 @@ li .context-menu {
   margin: 10px;
   padding: 5px 0;
   width: auto;
+  min-width: 150px;
   background-color: #ececec;
   border: solid 0px #dfdfdf;
   border-radius:  7px;
@@ -253,3 +272,40 @@ li .context-menu {
   margin-bottom: 4px;
   margin-right: 0px;
 }
+
+/*  numeric badge icon   */
+
+.fa-circle {
+  position: absolute;
+  right: 2px; /* -0.75em; */
+  top: 0px; /* -0.75em; */
+  padding: 0em;
+  border-radius: 10em;
+  color: red;
+  background: rgba(255,0,0,0.75);
+  min-width: 1.2em;
+}
+
+.fa-circle[data-count]{
+  position:relative;
+}
+.fa-circle[data-count]:after{
+  position: absolute;
+  right: 0px; /* -0.75em; */
+  top: -2px; /* -0.75em; */
+  content: attr(data-count);
+  padding: .2em;
+  border-radius: 10em;
+  line-height: .9em;
+  color: white;
+  background: rgba(255,0,0,0.75);
+  text-align: center;
+  min-width: 2.1em;
+  font: bold .8em sans-serif;
+}
+
+
+
+
+
+
