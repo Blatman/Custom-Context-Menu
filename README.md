@@ -28,6 +28,10 @@ The demo above is for the original repo code.
 
 <img src="/screenshots/cm-125-dark.png" alt="125dark" width="50%" />
 
+index3.html example
+
+<img src="/screenshots/cm-badger.png" alt="badger" width="50%" />
+
 Light/Dark Mode detection works with Safari 15+ (Catalina onwards) but is not fully functional on earlier releases eg: High Sierra has Dark mode only for the main menus and dock and will identify via the @media query as supporting Light Mode although Dark may be set.
 
 I have allowed Issues for this fork however maintenance and updates may be sporadic - it is more just a demo of the potential of the original repo.
@@ -53,19 +57,25 @@ I have allowed Issues for this fork however maintenance and updates may be spora
 * Disabled menu items
 * Icon switching (item selection) (see Click Piggy on last submenu)
 * Use of ellipsis when max width used (will give tooltip inherently for incomplete menu items)
+* Numeric badge icon available
+* Key shortcuts partially implemented
 
 ## Usage
 
 Just download the zip via the green Code button, unzip then double-click index.html which should open in Safari (right-click for Context Menu).
 The page will default to MacOS 12 theming.
 
-Two index pages are included with slight variations of layout.
+Three index pages are included with slight variations of layout. The index3.html file demonstrates the badge and key codes features.
 
 ## Operational Detail
 
 The index.html contains the hooks for the Context Menu. In this case the data-id is the hook for the clicked task. Once the menu is open then the data-action attribute provides the hook for each item. If the item happens to be a submenu link the data-action will be smx where x is the item row starting from 0 in the Context Menu. eg: if a Context Menu has 7 item rows with the submenus being on the second and last rows then the respective data-action attributes should be sm1 and sm6 (see index.html for detail).
 
 The context menu items all use a similar li element layout to try and keep element height consistency which makes it a bit easier to align the submenus. For this reason the hr element (separator) is replaced with a fa-window-minimize icon which is stretched to the width of the menu using the css transform method - this should suffice unless you wish to have dynamically changing menu items of variable width in which case you will need to be creative!
+
+Badge: usually used on a submenu link to show the number of items in the sublist without opening the submenu. Can be altered with JS with the value being set in the data-count attribute of the link i tag. The link i tag will be given an id to correspond with the item row in the menu eg: a submenu using a badge on the second item row will have an id of b1. Variations are allowed but id's must be unique to be used for updating the data-count values.
+
+Key codes: Combinations usually used with Safari (eg: cmd-P) should just work other custom combinations are a work in progress.
 
 ## Tests
 
