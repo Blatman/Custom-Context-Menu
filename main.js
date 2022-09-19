@@ -260,7 +260,9 @@
 
                     clear.forEach(classo => {
                         if (classo.getAttribute("data-action") == sm) {
-                            classo.classList.add('submenuActive');
+                            setTimeout(function() {
+                                classo.classList.add('submenuActive');
+                            }, 10);
                         }
                     })
 
