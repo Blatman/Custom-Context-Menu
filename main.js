@@ -231,10 +231,10 @@
 
         el.addEventListener("mouseover", function (e) {
 
-            idleClose = false;
+            var matcho = e.target.className;
+		    idleClose = false;
 
             if((!e.target.className.match(/context-menu__link-disabled/)) && (!e.target.className.match(/fa-window-minimize/))) {
-                var matcho = e.target.className;
                 var clear = document.querySelectorAll('.context-submenu__link');
                 clear.forEach(classo => {
                     classo.classList.remove('submenuActive'); // remove link highlighting
@@ -244,9 +244,9 @@
                     toggleSubMenuOff(1);
                 }
 
-                // check for submenu required       
+				// check for submenu required       
                 if (matcho.match(/context-submenu__link/)) {
-                    e.preventDefault();
+	                e.preventDefault();
                     currentLinkCheck = e.target.getAttribute('data-action');
 
                     if (currentLinkCheck != currentLink) {
@@ -274,12 +274,14 @@
 
                 } else { // no submenu required
 
-                    var test = e.target.classList;
+                    if (!matcho.match(/itemlabel/)) {
+					    var test = e.target.classList;
 
-                    if (!test.value.match(/fa/) && submenuState == 1) { // don't do if icons of submenu link are hovered
-                        submenuParent.classList.remove('submenuActive');
-                        toggleSubMenuOff(1);
-                    }
+                        if (!test.value.match(/fa/) && submenuState == 1) { // don't do if icons of submenu link are hovered
+                            submenuParent.classList.remove('submenuActive');
+                            toggleSubMenuOff(1);
+                        }
+					}
                 }
             } else {
                 // className is context-menu__link-disabled (may be a separator)

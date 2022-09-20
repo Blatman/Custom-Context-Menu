@@ -6,7 +6,7 @@
     <title>Custom Context Menus!</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="style.css">
+    <!--  <link rel="stylesheet" href="style.css"> -->
     <!--  <link rel="stylesheet" href="theme-1013-dark.css"> -->
     <!--  <link rel="stylesheet" href="theme-1014-dark.css"> -->
     <!--  <link rel="stylesheet" href="theme-12-light.css"> -->
@@ -29,9 +29,9 @@
                         Go To Grocery
                     </div>
                     <div class="task__actions">
-                        <i class="fa fa-eye"></i>
-                        <i class="fa fa-edit"></i>
-                        <i class="fa fa-times"></i>
+                        <span class="fa fa-eye"></span>
+                        <span class="fa fa-edit"></span>
+                        <span class="fa fa-times"></span>
                     </div>
                 </li>
                 <li class="task" data-id="2">
@@ -39,9 +39,9 @@
                         Type Some Code
                     </div>
                     <div class="task__actions">
-                        <i class="fa fa-eye"></i>
-                        <i class="fa fa-edit"></i>
-                        <i class="fa fa-times"></i>
+                        <span class="fa fa-eye"></span>
+                        <span class="fa fa-edit"></span>
+                        <span class="fa fa-times"></span>
                     </div>
                 </li>
                 <li class="task" data-id="1">
@@ -49,9 +49,9 @@
                         Build An App
                     </div>
                     <div class="task__actions">
-                        <i class="fa fa-eye"></i>
-                        <i class="fa fa-edit"></i>
-                        <i class="fa fa-times"></i>
+                        <span class="fa fa-eye"></span>
+                        <span class="fa fa-edit"></span>
+                        <span class="fa fa-times"></span>
                     </div>
                 </li>
             </ul>
@@ -72,36 +72,36 @@
     <nav id="context-menu" class="context-menu">
         <ul class="context-menu__items">
             <li class="context-menu__item">
-                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm0"><i id="b0" class="fa fa-circle" data-count="3"></i>&nbsp;Nature List</a>
+                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm0"><span class="itemicon fa fa-fw fa-leaf"></span><span class="itemlabel">&nbsp;Nature List</span><span id="b0" class="speed fa fa-circle" data-count="3">&nbsp;</span></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-menu__link context-menu__link-disabled" data-action="separator" style="cursor:default;"><i class="fa fa-window-minimize" style="transform: scale(60, 1); font-size: 8px;"></i></a>
+                <a href="#" class="context-menu__link context-menu__link-disabled" data-action="separator" style="cursor:default;"><span class="itemicon fa fa-window-minimize" style="transform: scale(60, 1); font-size: 8px;"></span><span class="itemlabel"></span><span class="speed">&nbsp;</span></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-menu__link" data-action="Cut"><i class="fa fa-themeisle"></i>&nbsp;Cut<span class="speed">&#x2318;X</span></a>
+                <a href="#" class="context-menu__link" data-action="Cut"><span class="itemicon fa fa-fw fa-themeisle"></span><span class="itemlabel">&nbsp;Cut</span><span class="speed">&#x2318;X</span></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-menu__link" data-action="Copy"><i class="fa fa-themeisle"></i>&nbsp;Copy<span class="speed">&#x2318;C</span></a>
+                <a href="#" class="context-menu__link" data-action="Copy"><span class="itemicon fa fa-fw fa-themeisle"></span><span class="itemlabel">&nbsp;Copy</span><span class="speed">&#x2318;C</span></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-menu__link" data-action="Paste"><i class="fa fa-themeisle"></i>&nbsp;Paste<span class="speed">&#x2318;V</span></a>
+                <a href="#" class="context-menu__link" data-action="Paste"><span class="itemicon fa fa-fw fa-themeisle"></span><span class="itemlabel">&nbsp;Paste</span><span class="speed">&#x2318;V</span></a>
             </li>
-                <a href="#" class="context-menu__link context-menu__link-disabled" data-action="separator" style="cursor:default;"><i class="fa fa-window-minimize" style="transform: scale(60, 1); font-size: 8px;"></i></a>
-            </li>
-            <li class="context-menu__item">
-                <a href="#" class="context-menu__link" data-action="Print"><i class="fa fa-themeisle"></i>&nbsp;Print<span class="speed">&#x2318;P</span></a>
+                <a href="#" class="context-menu__link context-menu__link-disabled" data-action="separator" style="cursor:default;"><span class="itemicon fa fa-window-minimize" style="transform: scale(60, 1); font-size: 8px;"></span><span class="itemlabel"></span><span class="speed">&nbsp;</span></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm7"><i class="fa fa-gear"></i>&nbsp;Options</a>
+                <a href="#" class="context-menu__link" data-action="Print"><span class="itemicon fa fa-fw fa-themeisle"></span><span class="itemlabel">&nbsp;Print</span><span class="speed">&#x2318;P</span></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm8"><i class="fa fa-plane"></i>&nbsp;Travel</a>
+                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm7"><span class="itemicon fa fa-fw fa-gear"></span><span class="itemlabel">&nbsp;Options</span><span class="speed">&nbsp;</span></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-menu__link context-menu__link-disabled" data-action="PaintMoon" style="cursor:default;"><i class="fa fa-paint-brush"></i><span class="itemlabel" style="width: 70px;">&nbsp;Paint the Moon</span><i class="speed">&#x2303;&#x2325;&#x2318;5</i></a>
+                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm8"><span class="itemicon fa fa-fw fa-plane"></span><span class="itemlabel">&nbsp;Travel</span><span class="speed">&nbsp;</span></a>
             </li>
             <li class="context-menu__item">
-                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm10"><i class="fa fa-ellipsis-h"></i>&nbsp;LongStuff</a>
+                <a href="#" class="context-menu__link context-menu__link-disabled" data-action="PaintMoon" style="cursor:default;"><span class="itemicon fa fa-fw fa-paint-brush"></span><span class="itemlabel" style="display: inline-block; width: 70px; line-height: 13px;">&nbsp;Paint the Moon</span><span class="speed">&#x2303;&#x2325;&#x2318;5</span></a>
+            </li>
+            <li class="context-menu__item">
+                <a href="#" class="context-submenu__link sm-link-icon" data-action="sm10"><span class="itemicon fa fa-fw fa-ellipsis-h"></span><span class="itemlabel">&nbsp;LongStuff</span><span class="speed">&nbsp;</span></a>
             </li>
         </ul>
     </nav>
@@ -109,61 +109,61 @@
         <nav id="sm0" class="context-submenu" data-id="0">
             <ul class="context-submenu__items">
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="Apple"><i class="fa fa-apple"></i>&nbsp;Fruit </a>
+                    <a href="#" class="context-menu__link" data-action="Apple"><span class="itemicon fa fa-fw fa-apple"></span><span class="itemlabel">&nbsp;Fruit</span><span class="speed">&nbsp;</span></a>
                 </li>
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="Paw"><i class="fa fa-paw"></i>&nbsp;Paw</a>
+                    <a href="#" class="context-menu__link" data-action="Paw"><span class="itemicon fa fa-fw fa-paw"></span><span class="itemlabel">&nbsp;Paw</span><span class="speed">&nbsp;</span></a>
                 </li>
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="Tree"><i class="fa fa-tree"></i>&nbsp;Tree</a>
+                    <a href="#" class="context-menu__link" data-action="Tree"><span class="itemicon fa fa-fw fa-tree"></span><span class="itemlabel">&nbsp;Tree</span><span class="speed">&nbsp;</span></a>
                 </li>
             </ul>
         </nav>
         <nav id="sm7" class="context-submenu" data-id="7">
             <ul class="context-submenu__items">
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="SMA"><i class="fa fa-check"></i>&nbsp;SubMenu Item A</a>
+                    <a href="#" class="context-menu__link" data-action="SMA"><span class="itemicon fa fa-fw fa-check"></span><span class="itemlabel">&nbsp;SubMenu Item A</span><span class="speed">&nbsp;</span></a>
                 </li>
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link context-menu__link-disabled" data-action="SMB" style="cursor:default;"><i class="fa fa-minus"></i>&nbsp;SubMenu Item B</a>
+                    <a href="#" class="context-menu__link context-menu__link-disabled" data-action="SMB" style="cursor:default;"><span class="itemicon fa fa-fw fa-minus"></span><span class="itemlabel">&nbsp;SubMenu Item B</span><span class="speed">&nbsp;</span></a>
                 </li>
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link context-menu__link-disabled" data-action="SMC" style="cursor:default;"><i class="fa fa-plus"></i>&nbsp;SubMenu Item C</a>
+                    <a href="#" class="context-menu__link context-menu__link-disabled" data-action="SMC" style="cursor:default;"><span class="itemicon fa fa-fw fa-plus"></span><span class="itemlabel">&nbsp;SubMenu Item C</span><span class="speed">&nbsp;</span></a>
                 </li>
             </ul>
         </nav>
         <nav id="sm8" class="context-submenu" data-id="8">
             <ul class="context-submenu__items">
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="2SMA2"><i class="fa fa-car"></i>&nbsp;Second SubMenu Item 2A</a>
+                    <a href="#" class="context-menu__link" data-action="2SMA2"><span class="itemicon fa fa-fw fa-car"></span><span class="itemlabel">&nbsp;Second SubMenu Item 2A</span><span class="speed">&nbsp;</span></a>
                 </li>
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="2SMB2"><i class="fa fa-bus"></i>&nbsp;Second SubMenu Item 2B</a>
+                    <a href="#" class="context-menu__link" data-action="2SMB2"><span class="itemicon fa fa-fw fa-bus"></span><span class="itemlabel">&nbsp;Second SubMenu Item 2B</span><span class="speed">&nbsp;</span></a>
                 </li>
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="2SMC2"><i class="fa fa-train"></i>&nbsp;Second SubMenu Item 2C</a>
+                    <a href="#" class="context-menu__link" data-action="2SMC2"><span class="itemicon fa fa-fw fa-train"></span><span class="itemlabel">&nbsp;Second SubMenu Item 2C</span><span class="speed">&nbsp;</span></a>
                 </li>
             </ul>
         </nav>
         <nav id="sm10" class="context-submenu" data-id="10">
             <ul class="context-submenu__items">
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="TOGGLEICON"><i class="fa fa-chain"></i>&nbsp;Click Piggy</a>
+                    <a href="#" class="context-menu__link" data-action="TOGGLEICON"><span class="itemicon fa fa-fw fa-chain"></span><span class="itemlabel">&nbsp;Click Piggy</span><span class="speed">&nbsp;</span></a>
                 </li>
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="Might break"><i class="fa fa-coffee"></i>&nbsp;This line is a joy to behold</a>
+                    <a href="#" class="context-menu__link" data-action="Might break"><span class="itemicon fa fa-fw fa-coffee"></span><span class="itemlabel">&nbsp;This line is a joy to behold</span><span class="speed">&nbsp;</span></a>
                 </li>
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="Sure to break"><i class="fa fa-bomb"></i>&nbsp;Here we go again - another big long line to check stuff out, maybe it will work maybe not. </a>
+                    <a href="#" class="context-menu__link" data-action="Sure to break"><span class="itemicon fa fa-fw fa-bomb"></span><span class="itemlabel">&nbsp;Here we go again - another big long line to check stuff out, maybe it will work maybe not.</span><span class="speed">&nbsp;</span></a>
                 </li>
                 <li class="context-menu__item">
-                    <a href="#" class="context-menu__link context-menu__link-disabled" data-action="separator" style="cursor:default;"><i class="fa fa-window-minimize" style="transform: scale(60, 1); font-size: 8px;"></i></a>
+                    <a href="#" class="context-menu__link context-menu__link-disabled" data-action="separator" style="cursor:default;"><span class="itemicon fa fa-window-minimize" style="transform: scale(60, 1); font-size: 8px;"></span><span class="itemlabel"></span><span class="speed">&nbsp;</span></a>
                 </li>
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="goFolder"><i class="fa fa-themeisle"></i>&nbsp;Go to Folder ...<span class="speed">&#x21e7;&#x2318;G</span></a>
+                    <a href="#" class="context-menu__link" data-action="goFolder"><span class="itemicon fa fa-fw fa-themeisle"></span><span class="itemlabel">&nbsp;Go to Folder ...</span><span class="speed">&#x21e7;&#x2318;G</span></a>
                 </li>
                 <li class="context-submenu__item">
-                    <a href="#" class="context-menu__link" data-action="newTab"><i class="fa fa-themeisle"></i>&nbsp;New TAB<span class="speed">&#x2318;T</span></a>
+                    <a href="#" class="context-menu__link" data-action="newTab"><span class="itemicon fa fa-fw fa-themeisle"></span><span class="itemlabel">&nbsp;New TAB</span><span class="speed">&#x2318;T</span></a>
                 </li>
             </ul>
         </nav>
@@ -174,7 +174,7 @@
 
     <script>
         /* *******************  not required if style links are used in HEAD  ******************* */
-/*
+
         var customtheme
 
         if (window.matchMedia) {
@@ -183,7 +183,7 @@
                 // Dark
                 console.log('DARK mode supported');
                 customtheme = 'theme-12-dark.css';
-            } else {
+	 } else {
                 // Light
                 console.log('LIGHT mode supported');
                 customtheme = 'theme-12-light.css';
@@ -215,7 +215,7 @@
                 })
                 .catch(err => alert(err));
         }
-*/
+
         /* **************************************************************************************** */
 
     </script>

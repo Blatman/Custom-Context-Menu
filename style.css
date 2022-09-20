@@ -33,7 +33,7 @@ li .context-menu {
 }
 
 .fa-window-minimize {
-    color:  Gainsboro;
+  color:  Gainsboro;
 }
 /* used for blank icon */
 .fa-themeisle {
@@ -41,16 +41,25 @@ li .context-menu {
 }
 
 .itemlabel {
-  display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+.itemicon {
+	margin-left: -10px;
+}
+
 .speed {
   position:  absolute;
-  right: 5px;
+  right: 8px;
+  font-size: 0.9em;
 }
+
+.fa-paintbrush {
+  font-size: 0.8em;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 24px;
@@ -277,12 +286,14 @@ li .context-menu {
 
 .fa-circle {
   position: absolute;
-  right: 2px; /* -0.75em; */
-  top: 0px; /* -0.75em; */
+  right: 0px; /* -0.75em; */
+  top: -1px; /* -0.75em; */
+  left: 15px;
   padding: 0em;
   border-radius: 10em;
-  color: red;
-  background: rgba(255,0,0,0.75);
+  color: black;
+  background: red;
+/*  background: rgba(255,0,0,0.95); */
   min-width: 1.2em;
 }
 
@@ -291,15 +302,17 @@ li .context-menu {
 }
 .fa-circle[data-count]:after{
   position: absolute;
-  right: 0px; /* -0.75em; */
+  right: 5px; /* -0.75em; */
   top: -2px; /* -0.75em; */
+  left: 0px;
   content: attr(data-count);
   padding: .2em;
   border-radius: 10em;
   line-height: .9em;
   color: white;
-  background: rgba(255,0,0,0.75);
-  text-align: center;
+  background: red;
+/*  background: rgba(255,0,0,0.95); */
+text-align: center;
   min-width: 2.1em;
   font: bold .8em sans-serif;
 }
