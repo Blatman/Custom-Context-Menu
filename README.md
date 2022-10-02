@@ -2,6 +2,7 @@
 
 First iteration on creating a custom context menu inside a dummy task application. Full working demo [here](http://codepen.io/callmenick/pen/xbaWdB).
 
+The demo above is for the original repo code.
 
 ## Fork Note
 
@@ -12,7 +13,6 @@ The code tries to give the look & feel of the native interface but is not the sa
 
 Note: Background color matching was tried using the RGBa opacity method but was not suitable since whilst the color does shift the reduced opacity will show artifacts of background layers - the feature needs some way of sampling the average color of the background and then applying it to the Context Menu background.
 
-The demo above is for the original repo code.
 
 ## Screen shots
 
