@@ -8,6 +8,7 @@
 .context-menu {
   background-color: #273746;
   border: solid 0px #1c2833;
+  box-shadow: 3px 3px 10px #1e1e1e;
 }
 
 .context-menu-active {  /* needed to avoid no right-click  */
@@ -43,6 +44,7 @@
 .context-submenu {
   background-color: #273746;
   border: solid 0px #1c2833;
+  box-shadow: 3px 3px 10px #1e1e1e;
 }
 
 .context-submenu-active {  /* needed to avoid no right-click  */
