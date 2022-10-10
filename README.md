@@ -1,8 +1,7 @@
 # Custom Context Menu
 
-First iteration on creating a custom context menu inside a dummy task application. Full working demo [here](http://codepen.io/callmenick/pen/xbaWdB).
-
-The demo above is for the original repo code.
+First iteration on creating a custom context menu inside a dummy task application.
+Full working demo for modified fork [here](https://www.wanderinghippo.org.uk/ccmdemo.php).
 
 ## Fork Note
 
