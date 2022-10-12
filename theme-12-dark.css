@@ -5,7 +5,7 @@ a.context-menu__link {
 }
 
 .fa-window-minimize {
-    color:  #566573;
+    color:  rgb(93,94,96);
 }
 
 #context-menu a.sm-link-icon::after{
@@ -19,8 +19,8 @@ a.context-menu__link {
 /* context menu */
 
 .context-menu {
-  background-color: #273746;
-  border: solid 0px #1c2833;
+  background-color: rgb(40,41,43);
+  border: solid 1px rgb(83,84,86);
   box-shadow: 3px 3px 10px #1e1e1e;
 }
 
@@ -48,15 +48,15 @@ a.context-menu__link {
 }
 
 .context-menu__link-disabled {
-  color: #bdbbc3;
+  color: rgb(103,104,106);
   margin-left: 3px;
   margin-top: 4px;
   margin-bottom: 4px;
 }
 
 .context-menu__link-disabled:hover {
-  color: #bdbbc3;
-  background-color: #273746;
+  color: rgb(103,104,106);
+  background-color: rgb(40,41,43);
   width:  100%;
   margin-left: 3px;
   margin-top: 4px;
@@ -66,8 +66,8 @@ a.context-menu__link {
 /* context-submenu */
 
 .context-submenu {
-  background-color: #273746;
-  border: solid 0px #1c2833;
+  background-color: rgb(40,41,43);
+  border: solid 1px rgb(83,84,86);
   box-shadow: 3px 3px 10px #1e1e1e;
 }
 
@@ -100,6 +100,26 @@ a.context-menu__link {
   margin-top: 4px;
   margin-bottom: 4px;
   margin-right: 3px;
+}
+
+.speed {
+  color: rgb(103,104,106);
+}
+
+.linkover:hover .speed {
+  color: #fff;
+}
+
+.separator {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 85% !important;
+}
+
+.separator:hover {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 85%;
 }
 
 
