@@ -31,6 +31,10 @@ index3.html example
 
 <img src="/screenshots/cm-badger.png" alt="badger" width="50%" />
 
+index3.html dark example (12.6)
+
+<img src="/screenshots/cm-126-dark.png" alt="126dark" width="50%" />
+
 Light/Dark Mode detection works with Safari 15+ (Catalina onwards) but is not fully functional on earlier releases eg: High Sierra has Dark mode only for the main menus and dock and will identify via the @media query as supporting Light Mode although Dark may be set.
 
 I have allowed Issues for this fork however maintenance and updates may be sporadic - it is more just a demo of the potential of the original repo.
@@ -80,7 +84,7 @@ Key codes: Combinations usually used with Safari (eg: cmd-P) should just work ot
 
 This fork was tested in the following browsers:
 
-* Safari 13 & 15 (High Sierra/Monterey)
+* Safari 13 & 15/16 (High Sierra/Monterey)
 * Firefox 106 Nightly
 * Chromium 84
 * Opera 88/91 (slight misalignments)
